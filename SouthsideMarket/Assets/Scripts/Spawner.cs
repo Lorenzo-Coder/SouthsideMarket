@@ -15,15 +15,12 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         float timer = howOften;
-        Debug.Log("Screen Width : " + Screen.width);
     }
 
     // Update is called once per frame
     void Update()
     {
         timer -= Time.deltaTime;
-
-        Debug.Log(timer);
 
         if (timer <= 0.0f)
         {
@@ -35,11 +32,8 @@ public class Spawner : MonoBehaviour
     //Called when we need to spawn item
     void SpawnItem()
     { 
-        int xPos = Random.Range(-10, 10);
-        Debug.Log("xPos: " + xPos);
+        int xPos = Random.Range(-9, 9);
         int yPos = (int)Mathf.Round(gameObject.transform.position.y);
-        Debug.Log("yPos : " + yPos);
-
         Instantiate(objectToSpawn, new Vector3(xPos, yPos, 0), Quaternion.identity);
     }
 }

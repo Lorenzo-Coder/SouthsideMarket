@@ -137,8 +137,6 @@ namespace LetterboxCamera
                     camera.rect = screenViewPortHorizontal;
                 }
             }
-
-            Debug.Log(camera.rect.width);
         }
     }
 
