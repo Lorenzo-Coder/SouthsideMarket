@@ -8,12 +8,18 @@ public class PlayerController : MonoBehaviour
 
     public int health = 50;
     public int happiness = 50;
+    public float howOftenDecreaseHealth = 1;
+    public float howOftenDecreaseHappiness = 1;
 
+    //Private
+    private float timerHealth;
+    private float timerHappiness;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        timerHealth = howOftenDecreaseHealth;
+        timerHappiness = howOftenDecreaseHappiness;
     }
 
     // Update is called once per frame
@@ -28,6 +34,22 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x - Time.deltaTime * moveSpeed, transform.position.y, transform.position.z);
         }
+
+        timerHappiness -= Time.deltaTime;
+        timerHealth -= Time.deltaTime;
+
+        if (timerHealth <= 0.0f)
+        {
+            health--;
+            timerHealth = howOftenDecreaseHealth;
+        }
+
+        if (timerHappiness <= 0.0f)
+        {
+            happiness--;
+            timerHappiness = howOftenDecreaseHappiness;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
