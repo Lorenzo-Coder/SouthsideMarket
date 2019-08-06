@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject loseScreen;
+    public ParticleSystem goodPS;
+    public ParticleSystem badPS;
 
     public float moveSpeed = 10.0f;
 
@@ -31,11 +33,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.D)||Input.GetKey(KeyCode.RightArrow))
         {
             transform.position = new Vector3(transform.position.x + Time.deltaTime * moveSpeed, transform.position.y, transform.position.z);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position = new Vector3(transform.position.x - Time.deltaTime * moveSpeed, transform.position.y, transform.position.z);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
         timerHappiness -= Time.deltaTime;
@@ -63,19 +68,21 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Hit");
+        //Debug.Log("Hit");
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("Grocery"))
         {
-            if (collision.transform.tag == "Healthy")
+            if (collision.gameObject.tag == "Healthy")
             {
-                health += 10;
-            }
-            else if (collision.transform.tag == "Junk")
-            {
-                health -= 10;
-                happiness += 10;
+                goodPS.Play();
             }
 
+            if (collision.gameObject.tag == "Junk")
+            {
+                badPS.Play();
+            }
+            health += collision.GetComponent<GroceryScript>().healthValue;
+            happiness += collision.GetComponent<GroceryScript>().happyValue;
             Destroy(collision.gameObject);
         }
     }
