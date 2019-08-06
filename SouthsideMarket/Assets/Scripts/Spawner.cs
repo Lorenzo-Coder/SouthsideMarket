@@ -32,8 +32,8 @@ public class Spawner : MonoBehaviour
     //Called when we need to spawn item
     void SpawnItem()
     { 
-        int xPos = Random.Range(-9, 9);
-        int yPos = (int)Mathf.Round(gameObject.transform.position.y);
+        float xPos = Random.Range(-2.0f, 2.0f);
+        float yPos = gameObject.transform.position.y;
         Instantiate(objectToSpawn, new Vector3(xPos, yPos, 0), Quaternion.identity);
     }
 }
