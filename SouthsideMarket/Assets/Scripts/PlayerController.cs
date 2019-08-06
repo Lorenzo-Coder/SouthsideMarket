@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject loseScreen;
+
     public float moveSpeed = 10.0f;
 
     public int health = 50;
@@ -20,6 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         timerHealth = howOftenDecreaseHealth;
         timerHappiness = howOftenDecreaseHappiness;
+        loseScreen.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,6 +51,12 @@ public class PlayerController : MonoBehaviour
         {
             happiness--;
             timerHappiness = howOftenDecreaseHappiness;
+        }
+
+        //Lose Condition
+        if (health <= 0 || happiness <= 0)
+        {
+            loseScreen.gameObject.SetActive(true);
         }
 
     }
