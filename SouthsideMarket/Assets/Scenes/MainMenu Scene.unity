@@ -898,7 +898,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Please don't Cry
+  m_text: Jolly Trolly
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -967,10 +967,10 @@ MonoBehaviour:
   m_margin: {x: -172.50153, y: 0, z: -174.75641, w: 0}
   m_textInfo:
     textComponent: {fileID: 617653604}
-    characterCount: 16
+    characterCount: 12
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1332,11 +1332,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin neque tortor,
-    ornare vitae lobortis sed, consequat non ante. Aenean venenatis tellus vel mauris
-    bibendum ultrices. Suspendisse potenti. Praesent eros sapien, facilisis at felis
-    ac, accumsan finibus ligula. Mauris pretium nisl scelerisque nibh euismod mattis.
-    Nunc a neque a felis cursus tincidunt. Aliquam erat volutpat. Ut non est erat. '
+  m_text: Use A and D or Arrow Keys to move left and right. Keep the baby happy and
+    healthy!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1364,7 +1361,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 30.9
+  m_fontSize: 62.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1405,12 +1402,12 @@ MonoBehaviour:
   m_margin: {x: -170.46771, y: -108.96994, z: -175.8623, w: -89.549515}
   m_textInfo:
     textComponent: {fileID: 849223073}
-    characterCount: 401
+    characterCount: 82
     spriteCount: 0
-    spaceCount: 58
-    wordCount: 58
+    spaceCount: 17
+    wordCount: 18
     linkCount: 0
-    lineCount: 8
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2015,7 +2012,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 74ee7edbf9d25c946bfff33163eb4564, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cd22aeccf36d5cc4595704897ef9bbdf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
