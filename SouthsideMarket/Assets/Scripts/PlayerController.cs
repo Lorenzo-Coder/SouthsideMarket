@@ -89,6 +89,16 @@ public class PlayerController : MonoBehaviour
             loseScreen.gameObject.SetActive(true);
         }
 
+        if (health > 100)
+        {
+            health = 100;
+        }
+
+        if (happiness > 100)
+        {
+            happiness = 100;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
