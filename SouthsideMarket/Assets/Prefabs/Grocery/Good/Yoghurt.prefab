@@ -143,10 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9e646218e5cb9449bcabfb53a3d895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 110597144184335823}
-  rb: {fileID: 110597144184335822}
-  blinkDuration: 2
-  blinkInterval: 0.5
 --- !u!114 &4518441538902222692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   happyValue: -5
-  healthValue: 10
+  healthValue: 5
 --- !u!1001 &1229510116353742796
 PrefabInstance:
   m_ObjectHideFlags: 0
