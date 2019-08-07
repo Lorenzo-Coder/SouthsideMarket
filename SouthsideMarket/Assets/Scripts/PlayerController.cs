@@ -17,11 +17,17 @@ public class PlayerController : MonoBehaviour
     public float howOftenDecreaseHealth = 1;
     public float howOftenDecreaseHappiness = 1;
 
+    //Sounds
+    public AudioClip collectGood;
+    public AudioClip collectBad;
+    public AudioClip clockCountdown;
+
     //Private
     private float timerHealth;
     private float timerHappiness;
     private int durationTimer = 60;
     private float durationCountdown;
+    private bool playedCountdown = false;
 
     // Start is called before the first frame update
     void Start()
@@ -89,6 +95,12 @@ public class PlayerController : MonoBehaviour
             loseScreen.gameObject.SetActive(true);
         }
 
+        if (durationCountdown <= 7.7f && playedCountdown == false)
+        {
+            gameObject.GetComponent<AudioSource>().PlayOneShot(clockCountdown);
+            playedCountdown = true;
+        }
+
         if (health > 100)
         {
             health = 100;
@@ -109,11 +121,13 @@ public class PlayerController : MonoBehaviour
         {
             if (collision.gameObject.tag == "Healthy")
             {
+                gameObject.GetComponent<AudioSource>().PlayOneShot(collectGood);
                 goodPS.Play();
             }
 
             if (collision.gameObject.tag == "Junk")
             {
+                gameObject.GetComponent<AudioSource>().PlayOneShot(collectBad);
                 badPS.Play();
             }
             health += collision.GetComponent<GroceryScript>().healthValue;
