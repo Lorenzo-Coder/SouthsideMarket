@@ -34,6 +34,11 @@ public class UIController : MonoBehaviour
         Health.value = (float)player.health / 100;
         Happiness.value = (float)player.happiness / 100;
 
+        if (player.happiness <= 0 || player.health <= 0)
+        {
+            gameLost = true;
+        }
+
         if (roundTimer <= 0.0f && !gameLost)
         {
             gameLost = true;
