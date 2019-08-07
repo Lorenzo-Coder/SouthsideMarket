@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public GameObject loseScreen;
     public ParticleSystem goodPS;
     public ParticleSystem badPS;
+    public Animator animator;
 
     public float moveSpeed = 10.0f;
 
@@ -33,7 +34,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.D)||Input.GetKey(KeyCode.RightArrow))
         {
             transform.position = new Vector3(transform.position.x + Time.deltaTime * moveSpeed, transform.position.y, transform.position.z);
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            transform.rotation = Quaternion.Euler(0, 180, 0);//2nd Value 180 to flip
 
         }
 
@@ -42,6 +43,18 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(transform.position.x - Time.deltaTime * moveSpeed, transform.position.y, transform.position.z);
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+        
+        //Animation
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            animator.SetFloat("Speed", 1);
+        }
+
+        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            animator.SetFloat("Speed", 0);
+        }
+
 
         timerHappiness -= Time.deltaTime;
         timerHealth -= Time.deltaTime;
