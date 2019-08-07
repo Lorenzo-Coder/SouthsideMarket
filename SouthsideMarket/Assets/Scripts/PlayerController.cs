@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject loseScreen;
+    public GameObject winScreen;
     public ParticleSystem goodPS;
     public ParticleSystem badPS;
 
@@ -18,6 +19,8 @@ public class PlayerController : MonoBehaviour
     //Private
     private float timerHealth;
     private float timerHappiness;
+    private int durationTimer = 60;
+    private float durationCountdown;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +28,8 @@ public class PlayerController : MonoBehaviour
         timerHealth = howOftenDecreaseHealth;
         timerHappiness = howOftenDecreaseHappiness;
         loseScreen.gameObject.SetActive(false);
+        winScreen.gameObject.SetActive(false);
+        durationCountdown = durationTimer;
     }
 
     // Update is called once per frame
@@ -45,6 +50,7 @@ public class PlayerController : MonoBehaviour
 
         timerHappiness -= Time.deltaTime;
         timerHealth -= Time.deltaTime;
+        durationCountdown -= Time.deltaTime;
 
         if (timerHealth <= 0.0f)
         {
@@ -56,6 +62,12 @@ public class PlayerController : MonoBehaviour
         {
             happiness--;
             timerHappiness = howOftenDecreaseHappiness;
+        }
+
+        //Win condition
+        if (durationCountdown <= 0.0f)
+        {
+            winScreen.gameObject.SetActive(true);
         }
 
         //Lose Condition
