@@ -65,7 +65,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6d3b279f8815b054284340b05778d628, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55bd5e5f994d2e940bd0f6d380b972ae, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -423,7 +423,7 @@ GameObject:
   - component: {fileID: 4423041135019056694}
   - component: {fileID: 4423041135019056693}
   m_Layer: 5
-  m_Name: YouLose
+  m_Name: YouWon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
