@@ -244,6 +244,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1687597210}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &323754306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6455112185595445782, guid: 145b66170b3cf46448c9f5fe78b98a5d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2663795221631384031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &345572363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2669640458826522253, guid: a2e98a2b9e11b584999eadab4477d483,
@@ -1084,8 +1090,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseScreen: {fileID: 1712781466}
+  winScreen: {fileID: 323754306}
   goodPS: {fileID: 1268240820}
   badPS: {fileID: 2033824122}
+  animator: {fileID: 0}
   moveSpeed: 2
   health: 50
   happiness: 50
