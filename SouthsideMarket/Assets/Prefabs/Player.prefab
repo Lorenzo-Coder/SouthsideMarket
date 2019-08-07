@@ -105,8 +105,8 @@ MonoBehaviour:
   moveSpeed: 2
   health: 50
   happiness: 50
-  howOftenDecreaseHealth: 0.5
-  howOftenDecreaseHappiness: 0.5
+  howOftenDecreaseHealth: 1
+  howOftenDecreaseHappiness: 1
 --- !u!50 &2127093827350050147
 Rigidbody2D:
   serializedVersion: 4
